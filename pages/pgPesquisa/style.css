@@ -131,7 +131,8 @@ h2 {
 }
 
 div.gan {
-    background: rgb(211, 211, 211);
+    /* background: rgb(211, 211, 211); */
+    background: black;
     width: 90%;
     height: 30%;
     overflow: auto;
