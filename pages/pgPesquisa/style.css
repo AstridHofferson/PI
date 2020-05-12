@@ -107,39 +107,143 @@ button.conta:hover {
 div.fiLi {
     display: flex;
     flex-direction: row;
-    width: 100%;
-    height: 70vh;
-    background: blue;
+    width: 95%;
+    min-height: 120vh;
+    margin: 15px;
+    background: #f6f6f7ff;
     justify-content: space-between;
 }
 
 div.filtros {
-    background: green;
-    width: 10%;
+    width: 25%;
+    min-height: 120vh;
+    max-height: 120vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background: #e6e6e6ff;
+}
+
+h2 {
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+div.gan {
+    background: rgb(211, 211, 211);
+    width: 90%;
+    height: 30%;
+    overflow: auto;
+}
+
+h3 {
+    margin: 10px;
+    border-bottom: solid black 1px;
+}
+
+div.item {
+    display: flex;
+    flex-direction: row;
+    height: 5vh;
+    width: 17vw;
+}
+
+div.item label {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 5px;
+}
+
+div.gan input {
+    display: none;
+}
+
+div.gan input+.check {
+    width: 1em;
+    height: 1em;
+    border: 1.5px solid black;
+    border-radius: 3px;
+    position: relative;
+    transition: 300ms;
+    cursor: pointer;
+}
+
+div.gan input+.check:before,
+div.gan input+.check:after {
+    content: " ";
+    position: absolute;
+    top: 5%;
+    left: calc(50% - 1px);
+    height: 90%;
+    width: 2px;
+    background: black;
+    transition: 300ms;
+    border-radius: 2px;
+    --rotate: 0;
+    --transX: 0;
+    --transY: 0;
+    transform: rotate(var(--rotate)) translateX(var(--transX)) translateY(var(--transY));
+}
+
+div.gan input+.check:before {
+    --rotate: -45deg;
+}
+
+div.gan input+.check:after {
+    --rotate: 45deg;
+}
+
+div.gan input:checked+.check {
+    background: #009688;
+    border-color: #009688;
+}
+
+div.gan input:checked+.check:before {
+    top: 13%;
+    background: #FFFFFF;
+    height: 49.2%;
+    --transX: -.35em;
+}
+
+div.gan input:checked+.check:after {
+    top: 5%;
+    background: #FFFFFF;
     height: 100%;
+    --transX: .100em;
+    --transY: -.100em;
 }
 
 div.livros {
-    background: blueviolet;
-    width: 70vw;
-    height: 100%;
+    background: #e6e6e6ff;
+    width: 67.5vw;
+    min-height: 100%;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
 }
 
 div.caTiAu {
     display: flex;
     flex-direction: column;
-    background: yellow;
     width: 12vw;
     height: 40vh;
-    align-items: center;
     margin: 10px;
+    align-items: center;
     text-align: center;
+    background: rgb(211, 211, 211);
 }
 
 img.capa {
     height: 150px;
     width: 110px;
     margin: 10px;
+    margin-bottom: 0px;
+    cursor: pointer;
+}
+
+p {
+    margin: 8.4px 0px 0px 0px;
+    font-weight: bold;
 }
