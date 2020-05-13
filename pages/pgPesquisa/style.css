@@ -131,8 +131,7 @@ h2 {
 }
 
 div.gan {
-    /* background: rgb(211, 211, 211); */
-    background: black;
+    background: rgb(211, 211, 211);
     width: 90%;
     height: 30%;
     overflow: auto;
@@ -197,20 +196,20 @@ div.gan input+.check:after {
 }
 
 div.gan input:checked+.check {
-    background: #009688;
-    border-color: #009688;
+    background: #e02041;
+    border-color: #e02041;
 }
 
 div.gan input:checked+.check:before {
     top: 13%;
-    background: #FFFFFF;
+    background: #fdf272;
     height: 49.2%;
     --transX: -.35em;
 }
 
 div.gan input:checked+.check:after {
     top: 5%;
-    background: #FFFFFF;
+    background: #fdf272;
     height: 100%;
     --transX: .100em;
     --transY: -.100em;
@@ -234,6 +233,11 @@ div.caTiAu {
     align-items: center;
     text-align: center;
     background: rgb(211, 211, 211);
+    cursor: pointer;
+}
+
+div.caTiAu:hover{
+    transform: scale(1.1);
 }
 
 img.capa {
@@ -241,7 +245,6 @@ img.capa {
     width: 110px;
     margin: 10px;
     margin-bottom: 0px;
-    cursor: pointer;
 }
 
 p {
