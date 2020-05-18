@@ -25,7 +25,7 @@ body {
     padding: 0;
     display: flex;
     flex-direction: column;
-    align-items: center
+    align-items: center;
 }
 
 div.cabecalho {
@@ -135,6 +135,13 @@ div.capa-titulo {
 
 div.capa-titulo:hover{
     transform: scale(1.2);
+}
+
+div.text {
+    width: 160px;
+    margin-top: none;
+    word-wrap: break-word;
+    text-align: center;
 }
 
 img.capa {

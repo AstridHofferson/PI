@@ -55,7 +55,7 @@ input.pesquisa {
     background: #f6f6f7;
 }
 
-input.pesquisa:focus{
+input.pesquisa:focus {
     background: #c7c7c7;
 }
 
@@ -75,12 +75,12 @@ input.search {
     transition: all 0.2s;
 }
 
-input.search:hover{
+input.search:hover {
     background-color: #faeb4b;
     transform: scale(1.05);
 }
 
-button.casa{
+button.casa {
     width: 7%;
     height: 50%;
     padding: 0;
@@ -102,31 +102,120 @@ button.conta {
 div.capaInfo {
     display: flex;
     flex-direction: row;
-    align-content: center;
-    background: red;
+    align-items: center;
+    background: #e6e6e6ff;
+    width: 80vw;
+    height: 65vh;
+    margin: 10px;
 }
 
 div.capa {
-    background: pink;
-}
-
-div.info {
-    margin: 10px;
-    background: green;
-}
-
-div.notar {
-    background: blue;
-}
-
-div.sinopse {
-    background: yellow;
-}
-
-div.comentarios {
-    background: purple;
+    margin: 10px 10px 10px 15px;
+    height: 60vh;
 }
 
 img.capa {
-    height: 400px;
+    height: 100%;
+}
+
+div.info {
+    width: 90%;
+    height: 60vh;
+    margin: 10px 15px 10px 10px;
+    background: rgb(211, 211, 211);
+}
+
+.info p {
+    margin-left: 10px;
+}
+
+.info img.star {
+    width: 2%;
+    height: 4%;
+}
+
+div.notar {
+    background: #e6e6e6ff;
+    text-align: center;
+    width: 80vw;
+    height: 20vh;
+    margin: 10px;
+}
+
+div.sinopse {
+    width: 80vw;
+    min-height: 27vh;
+    background: #e6e6e6ff;
+    margin: 10px;
+    text-align: justify;
+    word-wrap: break-word;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+div.blogs {
+    background: #e6e6e6ff;
+    width: 80vw;
+    min-height: 30vh;
+    margin: 10px;
+    padding-left: 25px;
+    padding-top: 5px;
+    font-weight: bold;
+}
+
+.blogs p {
+    display: block;
+    margin-block-start: 0.1px;
+    margin-block-end: 0.1px;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    width: 10vw;
+    cursor: pointer;
+}
+
+.blogs a:hover {
+    color: dodgerblue;
+}
+
+.blogs h2 {
+    width: 1vw;
+    display: inline-block;
+    color: #FC0;
+}
+
+.blogs img.star {
+    width: 2%;
+    height: 2%;
+    margin-right: 10px;
+}
+
+div.comentarios {
+    width: 80vw;
+    height: 50vh;
+    background: #e6e6e6ff;
+    text-align: center;
+    margin: 10px;
+}
+
+div.estrelas {
+    cursor: pointer;
+}
+
+.estrelas input[type=radio] {
+    display: none;
+}
+
+.estrelas label i.fa:before {
+    content:'\f005';
+    color: #FC0;
+    cursor: pointer;
+}
+
+.estrelas input[type=radio]:checked ~ label i.fa:before {
+    color: #CCC;
 }
