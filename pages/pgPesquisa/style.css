@@ -112,6 +112,7 @@ div.fiLi {
     margin: 15px;
     background: #f6f6f7ff;
     justify-content: space-between;
+    border-radius: 4px;
 }
 
 div.filtros {
@@ -123,6 +124,7 @@ div.filtros {
     align-items: center;
     justify-content: space-around;
     background: #e6e6e6ff;
+    border-radius: 4px;
 }
 
 h2 {
@@ -135,6 +137,7 @@ div.gan {
     width: 90%;
     height: 30%;
     overflow: auto;
+    border-radius: 4px;
 }
 
 h3 {
@@ -222,6 +225,7 @@ div.livros {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    border-radius: 4px;
 }
 
 div.caTiAu {
@@ -234,6 +238,7 @@ div.caTiAu {
     text-align: center;
     background: rgb(211, 211, 211);
     cursor: pointer;
+    border-radius: 4px;
 }
 
 div.caTiAu:hover{

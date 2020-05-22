@@ -80,14 +80,14 @@ input.search:hover {
     transform: scale(1.05);
 }
 
-button.casa {
-    width: 7%;
-    height: 50%;
-    padding: 0;
+img.logo {
+    height: 7vh;
+    width: 4.2vw;
     cursor: pointer;
-    border: none;
-    background: #f6f6f7ff;
-    border-radius: 4px;
+}
+
+img.logo:hover {
+    transform: scale(1.05);
 }
 
 button.conta {
@@ -99,6 +99,10 @@ button.conta {
     border-radius: 4px;
 }
 
+button.conta:hover {
+    transform: scale(1.05);
+}
+
 div.capaInfo {
     display: flex;
     flex-direction: row;
@@ -107,6 +111,7 @@ div.capaInfo {
     width: 80vw;
     height: 65vh;
     margin: 10px;
+    border-radius: 4px;
 }
 
 div.capa {
@@ -123,6 +128,7 @@ div.info {
     height: 60vh;
     margin: 10px 15px 10px 10px;
     background: rgb(211, 211, 211);
+    border-radius: 4px;
 }
 
 .info p {
@@ -140,6 +146,7 @@ div.notar {
     width: 80vw;
     height: 20vh;
     margin: 10px;
+    border-radius: 4px;
 }
 
 div.sinopse {
@@ -151,6 +158,7 @@ div.sinopse {
     word-wrap: break-word;
     padding-left: 25px;
     padding-right: 25px;
+    border-radius: 4px;
 }
 
 div.blogs {
@@ -161,6 +169,7 @@ div.blogs {
     padding-left: 25px;
     padding-top: 5px;
     font-weight: bold;
+    border-radius: 4px;
 }
 
 .blogs p {
@@ -196,24 +205,121 @@ a {
 
 div.comentarios {
     width: 80vw;
-    height: 50vh;
+    min-height: 50vh;
     background: #e6e6e6ff;
-    text-align: center;
     margin: 10px;
+    padding-left: 20px;
+    border-radius: 4px;
+}
+
+div.comentar {
+    width: 43vw;
+    height: 9vh;
+    margin-top: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+img.foto {
+    width: 4.5vw;
+    height: 100%;
+    border-radius: 4px;
+}
+
+input.comentar {
+    width: 37vw;
+    border-radius: 4px;
+    height: 80%;
+    border: none;
+    padding: 5px;
+    background: #f6f6f7;
+}
+
+input.comentar:focus {
+    background: #c7c7c7;
+}
+
+div.comentario {
+    background: #e6e6e6ff;
+    height: 20vh;
+    width: 77%;
+    text-align: justify;
+    word-wrap: break-word;
+}
+
+.comentario p {
+    margin: 10px 10px 0px 10px;
+}
+
+img.like {
+    background-image: url(../../images/like.png);
+    margin-left: 2px;
+    margin-top: 10px;
+    width: 1vw;
+    height: 2vh;
+    cursor: pointer;
+}
+
+img.like:hover {
+    transform: scale(1.05);
+}
+
+img.deslike {
+    background-image: url(../../images/deslike.png);
+    margin-right: 2px;
+    width: 1vw;
+    height: 2vh;
+    cursor: pointer;
+}
+
+img.deslike:hover {
+    transform: scale(1.01);
+}
+
+button.resp {
+    background: #e6e6e6ff;
+    border: none;
+    cursor: pointer;
+}
+
+button.resp:hover {
+    transform: scale(1.01);
+}
+
+div.usuario {
+    width: 15vw;
+    height: 6vh;
+    margin-top: 25px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: #e6e6e6ff;
+}
+
+img.fotoComent {
+    width: 3vw;
+    height: 100%;
+    border-radius: 4px;
+    margin-right: 10px;
 }
 
 div.estrelas {
     cursor: pointer;
 }
 
+div.estrelas label {
+    cursor: pointer;
+}
+
 .estrelas input[type=radio] {
     display: none;
-}
+  }
 
 .estrelas label i.fa:before {
     content:'\f005';
     color: #FC0;
-    cursor: pointer;
 }
 
 .estrelas input[type=radio]:checked ~ label i.fa:before {

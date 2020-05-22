@@ -111,6 +111,7 @@ div.categoria {
     height: 55vh;
     margin: 10px;
     background: #e6e6e6ff;
+    border-radius: 4px;
 }
 
 h3 {
