@@ -1,0 +1,23 @@
+{
+  "name": "PI-master",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AstridHofferson/PI.git"
+  },
+  "keywords": [],
+  "author": "Miriã Pereira",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AstridHofferson/PI/issues"
+  },
+  "homepage": "https://github.com/AstridHofferson/PI#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
