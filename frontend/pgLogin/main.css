@@ -28,14 +28,14 @@ div {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 80vh;
+    height: 90vh;
     width: 40vw;
     justify-content: space-around;
     background: #e6e6e6ff;
     border-radius: 4px;
     padding-top: 20px;
     padding-bottom: 20px;
-    margin: 60px
+    margin: 30px
 }
 
 input {

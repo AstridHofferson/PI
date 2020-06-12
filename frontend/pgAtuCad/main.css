@@ -33,12 +33,14 @@ div {
     justify-content: space-around;
     background: #e6e6e6ff;
     border-radius: 4px;
-    margin: 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin: 30px;
 }
 
 input {
     width: 90%;
-    height: 9%;
+    height: 12%;
     border-radius: 4px;
     border: none;
     padding: 5px;
