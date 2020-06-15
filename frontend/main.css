@@ -66,7 +66,7 @@ input.search {
     height: 100%;
     border: none;
     cursor: pointer;
-    background-image: url(../../images/lupa2.png);
+    background-image: url(../images/lupa2.png);
     background-position: center;
     background-size: cover;
     background-size: 50%;
@@ -102,50 +102,4 @@ button.conta {
 
 button.conta:hover {
     transform: scale(1.05);
-}
-
-div.categoria {
-    display: flex;
-    flex-direction: column;
-    width: 95vw;
-    height: 55vh;
-    margin: 10px;
-    background: #e6e6e6ff;
-    border-radius: 4px;
-}
-
-h3 {
-    margin: 20px 20px 10px 20px;
-}
-
-div.livros {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    height: 50vh;
-}
-
-div.capa-titulo {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 200px;
-    flex: none;
-    cursor: pointer;
-}
-
-div.capa-titulo:hover{
-    transform: scale(1.2);
-}
-
-div.text {
-    width: 160px;
-    margin-top: none;
-    word-wrap: break-word;
-    text-align: center;
-}
-
-img.capa {
-    height: 200px;
-    margin: 10px;
 }
