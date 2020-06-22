@@ -78,20 +78,10 @@ div.sinopse {
     margin-bottom: -5px;
 }
 
-/* div.avaliacoes {
-    display: flex;
-    flex-direction: row;
-    width: 80vw;
-    height: 80vh;
-    background: #e6e6e6ff;
-    border-radius: 4px;
-    margin: 10px;
-} */
-
 div.blogs {
     background: #e6e6e6ff;
     width: 80vw;
-    height: 75vh;
+    min-height: 67vh;
     margin: 15px 15px 15px 15px;
     padding-left: 25px;
     padding-top: 5px;
