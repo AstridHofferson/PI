@@ -1,0 +1,8 @@
+button.cadastro {
+    color: rgb(14, 171, 219);
+    background: transparent;
+}
+
+.cadastro:hover {
+    transform: scale(1.05);
+}

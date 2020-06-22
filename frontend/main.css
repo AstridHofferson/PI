@@ -66,17 +66,17 @@ input.search {
     height: 100%;
     border: none;
     cursor: pointer;
-    background-image: url(../images/lupa2.png);
+    background-image: url(../images/lupa.png);
     background-position: center;
     background-size: cover;
     background-size: 50%;
     background-repeat: no-repeat;
-    background-color: #fdf272;
+    background-color: #e6da5d;
     transition: all 0.2s;
 }
 
 input.search:hover{
-    background-color: #faeb4b;
+    background-color: #e4d538;
     transform: scale(1.05);
 }
 
@@ -90,16 +90,16 @@ img.logo:hover {
     transform: scale(1.05);
 }
 
-button.conta {
+button.perfil {
     width: 5%;
     height: 60%;
     cursor: pointer;
     border: none;
-    background: #f6f6f7ff;
+    background: #f6f6f7;
     border-radius: 4px;
     font-weight: bold;
 }
 
-button.conta:hover {
+button.perfil:hover {
     transform: scale(1.05);
 }

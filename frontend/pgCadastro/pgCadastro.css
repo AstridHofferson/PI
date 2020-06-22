@@ -6,3 +6,8 @@ div {
 input {
     height: 10%;
 }
+
+button {
+    align-self: flex-end;
+    margin-right: 27px;
+}

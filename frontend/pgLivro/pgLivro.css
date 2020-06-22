@@ -1,132 +1,54 @@
-* {
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-::-webkit-scrollbar {
-    width: 10px;
-}
-   
-::-webkit-scrollbar-thumb {
-    background: #6669;
-    border-radius: 20px;
-}
-  
-::-webkit-scrollbar-track {
-    background: #ddd;
-    border-radius: 20px;
-}
-
-body {
-    background: #f6f6f7ff;
-    height: 100%;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-div.cabecalho {
-    background: #e02041;
-    display: flex;
-    align-items: center;
-    height: 8vh;
-    width: 100%;
-    justify-content: space-around;
-}
-
-div.pesquisa {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 40vw;
-    height: 5vh;
-}
-
-input.pesquisa {
-    width: 100%;
-    border-bottom-left-radius: 4px;
-    border-top-left-radius: 4px;
-    height: 100%;
-    border: none;
-    padding: 5px;
-    background: #f6f6f7;
-}
-
-input.pesquisa:focus {
-    background: #c7c7c7;
-}
-
-input.search {
-    border-bottom-right-radius: 4px;
-    border-top-right-radius: 4px;
-    width: 10%;
-    height: 100%;
-    border: none;
-    cursor: pointer;
-    background-image: url(../../images/lupa2.png);
-    background-position: center;
-    background-size: cover;
-    background-size: 50%;
-    background-repeat: no-repeat;
-    background-color: #fdf272;
-    transition: all 0.2s;
-}
-
-input.search:hover {
-    background-color: #faeb4b;
-    transform: scale(1.05);
-}
-
-img.logo {
-    height: 7vh;
-    width: 4.2vw;
-    cursor: pointer;
-}
-
-img.logo:hover {
-    transform: scale(1.05);
-}
-
-button.conta {
-    height: 50%;
-    width: 6%;
-    cursor: pointer;
-    border: none;
-    background: #f6f6f7ff;
-    border-radius: 4px;
-}
-
-button.conta:hover {
-    transform: scale(1.05);
-}
-
 div.capaInfo {
     display: flex;
     flex-direction: row;
     align-items: center;
     background: #e6e6e6ff;
     width: 80vw;
-    height: 65vh;
-    margin: 10px;
+    height: 75vh;
+    margin: 0px 10px 10px 10px;
+    border-radius: 4px;
+}
+
+div.caEs {
+    width: 40vw;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     border-radius: 4px;
 }
 
 div.capa {
-    margin: 10px 10px 10px 15px;
     height: 60vh;
 }
 
 img.capa {
-    height: 100%;
+    margin: 5px;
+    height: 90%;
+}
+
+div.avaliar {
+    background: rgb(211, 211, 211);
+    text-align: center;
+    width: 8vw;
+    height: 14vh;
+    display: flex;
+    flex-direction: column;
+    border-radius: 4px;
+    align-items: center;
+    justify-content: center;
+    margin-top: -20px;
+}
+
+.avaliar h3 {
+    margin-top: -5px;
 }
 
 div.info {
-    width: 90%;
+    width: 57vw;
     height: 60vh;
-    margin: 10px 15px 10px 10px;
+    margin-right: 15px;
+    margin-left: 5px;
     background: rgb(211, 211, 211);
     border-radius: 4px;
 }
@@ -136,36 +58,41 @@ div.info {
 }
 
 .info img.star {
-    width: 2%;
-    height: 4%;
-}
-
-div.notar {
-    background: #e6e6e6ff;
-    text-align: center;
-    width: 80vw;
-    height: 20vh;
-    margin: 10px;
-    border-radius: 4px;
+    width: 1vw;
+    height: 2vh;
 }
 
 div.sinopse {
-    width: 80vw;
-    min-height: 27vh;
-    background: #e6e6e6ff;
-    margin: 10px;
+    width: 60vw;
+    height: 60vh;
+    background: rgb(211, 211, 211);
+    margin-right: 15px;
     text-align: justify;
     word-wrap: break-word;
-    padding-left: 25px;
-    padding-right: 25px;
+    padding-left: 20px;
+    padding-right: 20px;
     border-radius: 4px;
 }
+
+.sinopse h3 {
+    margin-bottom: -5px;
+}
+
+/* div.avaliacoes {
+    display: flex;
+    flex-direction: row;
+    width: 80vw;
+    height: 80vh;
+    background: #e6e6e6ff;
+    border-radius: 4px;
+    margin: 10px;
+} */
 
 div.blogs {
     background: #e6e6e6ff;
     width: 80vw;
-    min-height: 30vh;
-    margin: 10px;
+    height: 75vh;
+    margin: 15px 15px 15px 15px;
     padding-left: 25px;
     padding-top: 5px;
     font-weight: bold;
@@ -174,10 +101,10 @@ div.blogs {
 
 .blogs p {
     display: block;
-    margin-block-start: 0.1px;
-    margin-block-end: 0.1px;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
+    margin-block-start: -10px;
+    margin-block-end: -10px;
+    margin-inline-start: -10px;
+    margin-inline-end: -10px;
 }
 
 a {
@@ -198,8 +125,8 @@ a {
 }
 
 .blogs img.star {
-    width: 2%;
-    height: 2%;
+    width: 1.5vw;
+    height: 3vh;
     margin-right: 10px;
 }
 
@@ -235,6 +162,7 @@ input.comentar {
     border: none;
     padding: 5px;
     background: #f6f6f7;
+    font-size: 1em;
 }
 
 input.comentar:focus {
@@ -323,5 +251,5 @@ div.estrelas label {
 }
 
 .estrelas input[type=radio]:checked ~ label i.fa:before {
-    color: #CCC;
+    color: rgb(185, 185, 185);
 }
