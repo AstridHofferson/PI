@@ -45,10 +45,9 @@ div.avaliar {
 }
 
 div.info {
-    width: 57vw;
-    height: 60vh;
+    width: 60vw;
+    height: 69vh;
     margin-right: 15px;
-    margin-left: 5px;
     background: rgb(211, 211, 211);
     border-radius: 4px;
 }
@@ -63,25 +62,29 @@ div.info {
 }
 
 div.sinopse {
-    width: 60vw;
-    height: 60vh;
+    width: 55vw;
+    height: 69vh;
     background: rgb(211, 211, 211);
-    margin-right: 15px;
+    margin: 15px 15px 15px 0px;
     text-align: justify;
     word-wrap: break-word;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 5px;
     border-radius: 4px;
 }
 
-.sinopse h3 {
-    margin-bottom: -5px;
+div.avRel {
+    display: flex;
+    width: 80vw;
+    min-height: 75vh;
+    background: #e6e6e6ff;
+    border-radius: 4px;
 }
 
 div.blogs {
-    background: #e6e6e6ff;
-    width: 80vw;
-    min-height: 67vh;
+    background: rgb(211, 211, 211);
+    width: 60vw;
     margin: 15px 15px 15px 15px;
     padding-left: 25px;
     padding-top: 5px;
@@ -118,6 +121,32 @@ a {
     width: 1.5vw;
     height: 3vh;
     margin-right: 10px;
+}
+
+div.relacionado {
+    display: flex;
+    flex-direction: column;
+    background: rgb(211, 211, 211);
+    width: 60vw;
+    padding-left: 25px;
+    padding-top: 5px;
+    font-weight: bold;
+    border-radius: 4px;
+    margin: 15px 15px 15px 0px;
+}
+
+img.rel {
+    height: 80%;
+    align-self: center;
+    cursor: pointer;
+}
+
+.rel:hover{
+    transform: scale(1.1);
+}
+
+.relacionado h3 {
+    margin-bottom: 30px;
 }
 
 div.comentarios {
