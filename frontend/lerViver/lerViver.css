@@ -17,6 +17,7 @@ div.livros {
     flex-direction: row;
     justify-content: space-around;
     height: 50vh;
+    padding-top: 10px;
 }
 
 div.capa-titulo {
@@ -26,6 +27,7 @@ div.capa-titulo {
     height: 200px;
     flex: none;
     cursor: pointer;
+    transition: 0.2s;
 }
 
 div.capa-titulo:hover{
