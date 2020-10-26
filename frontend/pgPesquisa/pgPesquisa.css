@@ -7,6 +7,7 @@ div.fiLi {
     background: #f6f6f7ff;
     justify-content: space-between;
     border-radius: 4px;
+    padding-top: 70px;
 }
 
 div.filtros {
@@ -35,7 +36,8 @@ div.gan {
 }
 
 h3 {
-    margin: 10px;
+    /* text-align: center; */
+    margin: 20px 20px -5px 20px;
     border-bottom: solid black 1px;
 }
 
@@ -132,6 +134,7 @@ div.caTiAu {
     background: rgb(211, 211, 211);
     cursor: pointer;
     border-radius: 4px;
+    transition: .2s;
 }
 
 div.caTiAu:hover{
@@ -141,11 +144,10 @@ div.caTiAu:hover{
 img.capa {
     height: 150px;
     width: 110px;
-    margin: 10px;
-    margin-bottom: 0px;
+    margin: 20px 10px 0 10px;
 }
 
 p {
-    margin: 8.4px 0px 0px 0px;
+    margin-top: 8.4px;
     font-weight: bold;
 }

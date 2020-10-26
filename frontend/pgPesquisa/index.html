@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="../main.css" rel="stylesheet">
     <link href="pgPesquisa.css" rel="stylesheet">
     <title>Ler é Viver</title>
@@ -11,15 +13,19 @@
     <link rel="icon" type="image/png" sizes="32x32" href="../../images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="../../images/favicon-16x16.png">
     <link rel="manifest" href="../../images/site.webmanifest">
+    <script src="../main.js" defer></script>
 </head>
+
 <body>
     <div class="cabecalho">
-        <img class="logo" src="../../images/Logo.png">
+        <div class="logo"><a href="http://127.0.0.1:5501/frontend/lerViver/index.html"><img class="logo" src="../../images/Logo.png"></a></div>
         <div class="pesquisa">
             <input class="pesquisa" type="text" placeholder="Pesquise por título ou autor">
-            <input type="submit" class="search" value="">
+            <span class="material-icons">
+                search
+            </span>
         </div>
-        <button class="perfil">Perfil</button>
+        <div class="perfil"><a href="http://127.0.0.1:5501/frontend/pgAtuCad/index.html">Perfil</a></div>
     </div>
 
     <div class="fiLi">
@@ -255,6 +261,6 @@
             </div>
         </div>
     </div>
-
 </body>
+
 </html>

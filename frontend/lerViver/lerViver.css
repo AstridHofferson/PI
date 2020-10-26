@@ -1,22 +1,27 @@
+div.catLiv {
+    margin: 60px 0 30px 0;
+}
+
 div.categoria {
     display: flex;
     flex-direction: column;
     width: 95vw;
-    height: 55vh;
-    margin: 10px;
+    height: 52vh;
+    margin-top: 30px;
     background: #e6e6e6ff;
     border-radius: 4px;
 }
 
 h3 {
-    margin: 20px 20px 10px 20px;
+    margin: 20px 0 0 20px;
 }
 
 div.livros {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    height: 50vh;
+    height: 100%;
+    width: 100%;
     padding-top: 10px;
 }
 
@@ -31,7 +36,7 @@ div.capa-titulo {
 }
 
 div.capa-titulo:hover{
-    transform: scale(1.2);
+    transform: scale(1.1);
 }
 
 div.text {

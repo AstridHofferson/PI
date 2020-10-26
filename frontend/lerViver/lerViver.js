@@ -28,7 +28,7 @@ async function handleShelf() {
     divCapaTitulo.setAttribute('id', book.id);
 
     divCapaTitulo.addEventListener('click', () => {
-      window.location.href = `http://127.0.0.1:5500/frontend/pgLivro/index.html?idLivro=${book.id}`;
+      window.location.href = `http://127.0.0.1:5501/frontend/pgLivro/index.html?idLivro=${book.id}`;
     })
 
     const imgCapa = document.createElement('img');

@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="../main.css" rel="stylesheet">
     <link href="lerViver.css" rel="stylesheet">
     <title>Ler é Viver</title>
@@ -11,91 +13,97 @@
     <link rel="icon" type="image/png" sizes="32x32" href="../../images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="../../images/favicon-16x16.png">
     <link rel="manifest" href="../../images/site.webmanifest">
+    <script src="./lerViver.js" defer></script>
+    <script src="../main.js" defer></script>
 </head>
+
 <body>
     <div class="cabecalho">
-        <img class="logo" src="../../images/Logo.png">
+        <div class="logo"><a href="http://127.0.0.1:5501/frontend/lerViver/index.html"><img class="logo" src="../../images/Logo.png"></a></div>
         <div class="pesquisa">
             <input class="pesquisa" type="text" placeholder="Pesquise por título ou autor">
-            <input type="submit" class="search" value="">
+            <span class="material-icons">
+                search
+            </span>
         </div>
-        <button class="perfil">Perfil</button>
+        <div class="perfil">Perfil</a></div>
     </div>
 
-    <div class="categoria">
-        <h3>Livros</h3>
-        <div class="livros">
-        </div>
-    </div>
-
-    <div class="categoria">
-        <h3>Para novos leitores</h3>
-        <div class="livros">
-            <div class="capa-titulo">
-                <img class="capa" src="../../images/cronicasnarnia.jpg">
-                <div class="text">As Crônicas de Nárnia</div>
-            </div>
-            <div class="capa-titulo">
-                <img class="capa" src="../../images/ruinasdegorlan.jpg">
-                <div class="text">Rangers - Ruínas de Gorlan</div>
-            </div>
-            <div class="capa-titulo">
-                <img class="capa" src="../../images/pontechamas.jpg">
-                <div class="text">Rangers - Ponte em Chamas</div>
-            </div>
-            <div class="capa-titulo">
-                <img class="capa" src="../../images/jogosvorazes.jpg">
-                <div class="text">Jogos Vorázes</div>
-            </div>
-            <div class="capa-titulo">
-                <img class="capa" src="../../images/comotreinaroseudragao.jpg">
-                <div class="text">Como Treinar o Seu Dragão</div>
-            </div>
-            <div class="capa-titulo">
-                <img class="capa" src="../../images/ohobbit.jpg">
-                <div class="text">O Hobbit</div>
+    <div class="catLiv">
+        <div class="categoria">
+            <h3>Livros</h3>
+            <div class="livros">
             </div>
         </div>
-    </div>
 
-    <div class="categoria">
-        <h3>Recém-publicados</h3>
-        <div class="livros">
-            <div class="capa-titulo">
-                <img class="capa" src="../../images/cronicasnarnia.jpg">
-                <div class="text">As Crônicas de Nárnia</div>
+        <div class="categoria">
+            <h3>Para novos leitores</h3>
+            <div class="livros">
+                <div class="capa-titulo">
+                    <img class="capa" src="../../images/cronicasnarnia.jpg">
+                    <div class="text">As Crônicas de Nárnia</div>
+                </div>
+                <div class="capa-titulo">
+                    <img class="capa" src="../../images/ruinasdegorlan.jpg">
+                    <div class="text">Rangers - Ruínas de Gorlan</div>
+                </div>
+                <div class="capa-titulo">
+                    <img class="capa" src="../../images/pontechamas.jpg">
+                    <div class="text">Rangers - Ponte em Chamas</div>
+                </div>
+                <div class="capa-titulo">
+                    <img class="capa" src="../../images/jogosvorazes.jpg">
+                    <div class="text">Jogos Vorázes</div>
+                </div>
+                <div class="capa-titulo">
+                    <img class="capa" src="../../images/comotreinaroseudragao.jpg">
+                    <div class="text">Como Treinar o Seu Dragão</div>
+                </div>
+                <div class="capa-titulo">
+                    <img class="capa" src="../../images/ohobbit.jpg">
+                    <div class="text">O Hobbit</div>
+                </div>
             </div>
-            <div class="capa-titulo">
-                <img class="capa" src="../../images/ruinasdegorlan.jpg">
-                <div class="text">Rangers - Ruínas de Gorlan</div>
-            </div>
-            <div class="capa-titulo">
-                <img class="capa" src="../../images/orgulhoepreconceito.jpg">
-                <div class="text">Orgulho e Preconceito</div>
-            </div>
-            <div class="capa-titulo">
-                <img class="capa" src="../../images/janeeyre.jpg">
-                <div class="text">Jane Eyre</div>
-            </div>
-            <div class="capa-titulo">
-                <img class="capa" src="../../images/comotreinaroseudragao.jpg">
-                <div class="text">Como Treinar o Seu Dragão</div>
-            </div>
-            <div class="capa-titulo">
-                <img class="capa" src="../../images/cronicasnarnia.jpg">
-                <div class="text">As Crônicas de Nárnia</div>
-            </div>
-            <div class="capa-titulo">
-                <img class="capa" src="../../images/ruinasdegorlan.jpg">
-                <div class="text">Rangers - Ruínas de Gorlan</div>
-            </div>
-            <div class="capa-titulo">
-                <img class="capa" src="../../images/orgulhoepreconceito.jpg">
-                <div class="text">Orgulho e Preconceito</div>
+        </div>
+
+        <div class="categoria">
+            <h3>Recém-publicados</h3>
+            <div class="livros">
+                <div class="capa-titulo">
+                    <img class="capa" src="../../images/cronicasnarnia.jpg">
+                    <div class="text">As Crônicas de Nárnia</div>
+                </div>
+                <div class="capa-titulo">
+                    <img class="capa" src="../../images/ruinasdegorlan.jpg">
+                    <div class="text">Rangers - Ruínas de Gorlan</div>
+                </div>
+                <div class="capa-titulo">
+                    <img class="capa" src="../../images/orgulhoepreconceito.jpg">
+                    <div class="text">Orgulho e Preconceito</div>
+                </div>
+                <div class="capa-titulo">
+                    <img class="capa" src="../../images/janeeyre.jpg">
+                    <div class="text">Jane Eyre</div>
+                </div>
+                <div class="capa-titulo">
+                    <img class="capa" src="../../images/comotreinaroseudragao.jpg">
+                    <div class="text">Como Treinar o Seu Dragão</div>
+                </div>
+                <div class="capa-titulo">
+                    <img class="capa" src="../../images/cronicasnarnia.jpg">
+                    <div class="text">As Crônicas de Nárnia</div>
+                </div>
+                <div class="capa-titulo">
+                    <img class="capa" src="../../images/ruinasdegorlan.jpg">
+                    <div class="text">Rangers - Ruínas de Gorlan</div>
+                </div>
+                <div class="capa-titulo">
+                    <img class="capa" src="../../images/orgulhoepreconceito.jpg">
+                    <div class="text">Orgulho e Preconceito</div>
+                </div>
             </div>
         </div>
     </div>
-
-    <script src="./lerViver.js"></script>
 </body>
+
 </html>

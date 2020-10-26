@@ -1,6 +1,7 @@
 button.cadastro {
     color: rgb(14, 171, 219);
     background: transparent;
+    transition: .2s;
 }
 
 .cadastro:hover {

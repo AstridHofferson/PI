@@ -1,3 +1,11 @@
+div.tudo {
+    padding-top: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
 div.capaInfo {
     display: flex;
     flex-direction: row;
@@ -5,7 +13,7 @@ div.capaInfo {
     background: #e6e6e6ff;
     width: 80vw;
     height: 75vh;
-    margin: 0px 10px 10px 10px;
+    margin: 5px 0 40px 0;
     border-radius: 4px;
 }
 
@@ -30,7 +38,7 @@ img.capa {
 div.avaliar {
     background: rgb(211, 211, 211);
     text-align: center;
-    width: 8vw;
+    width: 16vw;
     height: 14vh;
     display: flex;
     flex-direction: column;
@@ -74,18 +82,23 @@ div.sinopse {
     border-radius: 4px;
 }
 
+.sinopse h3 {
+    text-align: center;
+}
+
 div.avRel {
     display: flex;
     width: 80vw;
     min-height: 75vh;
     background: #e6e6e6ff;
     border-radius: 4px;
+    margin: 0 0 40px 0;
 }
 
 div.blogs {
-    background: rgb(211, 211, 211);
     width: 60vw;
-    margin: 15px 15px 15px 15px;
+    background: rgb(211, 211, 211);
+    margin: 15px;
     padding-left: 25px;
     padding-top: 5px;
     font-weight: bold;
@@ -107,6 +120,10 @@ a {
     cursor: pointer;
 }
 
+.blogs h3 {
+    text-align: center;
+}
+
 .blogs a:hover {
     color: dodgerblue;
 }
@@ -126,19 +143,21 @@ a {
 div.relacionado {
     display: flex;
     flex-direction: column;
+    text-align: center;
     background: rgb(211, 211, 211);
     width: 60vw;
     padding-left: 25px;
     padding-top: 5px;
     font-weight: bold;
     border-radius: 4px;
-    margin: 15px 15px 15px 0px;
+    margin: 15px 15px 15px 0;
 }
 
 img.rel {
     height: 80%;
     align-self: center;
     cursor: pointer;
+    transition: 0.2s;
 }
 
 .rel:hover{
@@ -153,9 +172,9 @@ div.comentarios {
     width: 80vw;
     min-height: 50vh;
     background: #e6e6e6ff;
-    margin: 10px;
     padding-left: 20px;
     border-radius: 4px;
+    margin-bottom: 40px;
 }
 
 div.comentar {
