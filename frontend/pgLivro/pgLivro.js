@@ -3,7 +3,7 @@ const info = document.getElementsByClassName('informacoes');
 const title = document.getElementsByClassName('titulo');
 const imgCover = document.getElementsByClassName('capa');
 
-const urlParams = new URLSearchParams(location.search);
+const urlParams = new URLSearchParams(location.search); //pegando parametros que vem pela URL
 
 async function handleBook() {
   response = await fetch(`http://localhost:3333/books/${urlParams.get('idLivro')}`);
@@ -14,7 +14,7 @@ async function handleBook() {
 
   const cover = covers.find(cover => cover.id === book.id);
 
-  title[0].innerHTML = book.title;
+  title[0].innerHTML = book.title; //colocando o título do livro na pg
 
   imgCover[1].setAttribute('src', cover.image_url);
 
@@ -26,7 +26,7 @@ async function handleBook() {
   info[5].innerHTML = `<b>Editora(s):</b> ${book.publisher}`;
   info[6].innerHTML = `<b>Preço:</b> ${book.price}`;
 
-  synopsis[0].children[1].innerHTML = book.synopsis
+  synopsis[0].children[1].innerHTML = book.synopsis //colocando texto dentro do segundo filho de sinopse
 }
 
 handleBook();
