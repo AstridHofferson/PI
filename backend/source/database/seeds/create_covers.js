@@ -11,7 +11,7 @@ module.exports = {
       { title: 'O Hobbit', image: 'o-hobbit.jpg' },
       { title: 'Orgulho e Preconceito', image: 'orgulho-e-preconceito.jpg' },
       { title: 'Rangers - Ruínas de Gorlan', image: 'rangers-ruinas-de-gorlan.jpg' },
-      { title: 'Rangers - Ponte em chamas', image: 'rangers-ponte-em-chamas.jpg' },
+      { title: 'A Rainha Vermelha', image: 'rainha-vermelha.jpg' },
     ]);
   } 
 }

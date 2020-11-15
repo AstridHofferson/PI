@@ -153,14 +153,14 @@ div.relacionado {
     margin: 15px 15px 15px 0;
 }
 
-img.rel {
-    height: 80%;
+img.capaRel {
+    height: 55vh;
     align-self: center;
     cursor: pointer;
     transition: 0.2s;
 }
 
-.rel:hover{
+.capaRel:hover{
     transform: scale(1.1);
 }
 
