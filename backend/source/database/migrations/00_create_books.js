@@ -10,6 +10,7 @@ exports.up = function(knex) {
     table.string('originalTitle').notNullable();
     table.string('publisher').notNullable();
     table.string('price');
+    table.integer('readingLevel');
   });
 };
 

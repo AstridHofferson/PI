@@ -7,6 +7,9 @@ async function handleShelf() { //função assíncrona não lê a próxima linha 
   
   const shelves = document.getElementsByClassName('livros');
   
+
+
+  //primeira coluna (livros)
   const randomizedBooks = [];
 
   for (let i = 0; i < 8; i++) {
@@ -45,7 +48,9 @@ async function handleShelf() { //função assíncrona não lê a próxima linha 
     shelves[0].appendChild(divCapaTitulo);
   });
 
-  //categoria dos livros recém-publicados
+  
+
+  //terceira coluna (livros recém-publicados)
   const latestBooks = [];
 
   const releaseDates = books.map(book => { //passando por todos os objetos do array de livros /map retorna array

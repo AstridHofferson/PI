@@ -29,6 +29,9 @@ async function handleBook() {
 
   synopsis[0].children[1].innerHTML = book.synopsis; //colocando texto dentro do segundo filho de sinopse
   
+
+
+  //livro relacionado
   response = await fetch('http://localhost:3333/books');
   books = await response.json()
 
