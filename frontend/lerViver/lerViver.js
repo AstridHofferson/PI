@@ -51,6 +51,43 @@ async function handleShelf() { //função assíncrona não lê a próxima linha 
   
 
   //terceira coluna (livros recém-publicados)
+  let newReadersBooks = [];
+  
+  for (let i = 0; i < books.length; i++) {
+    if(books[i].readingLevel <= 2) {
+      newReadersBooks.push(books[i]);
+    }
+  }
+
+  newReadersBooks.forEach((book, index) => { 
+
+    const cover = covers.find(cover => cover.id === book.id);
+
+    const divCapaTitulo = document.createElement('div');
+    divCapaTitulo.setAttribute('class', 'capa-titulo');
+    divCapaTitulo.setAttribute('id', book.id);
+
+    divCapaTitulo.addEventListener('click', () => {
+      window.location.href = `http://127.0.0.1:5501/frontend/pgLivro/index.html?idLivro=${book.id}`;
+    })
+
+    const imgCapa = document.createElement('img');
+    imgCapa.setAttribute('class', 'capa');
+    imgCapa.setAttribute('src', cover.image_url);
+
+    const divText = document.createElement('div');
+    divText.setAttribute('class', 'text');
+    divText.innerHTML = book.title;
+
+    divCapaTitulo.appendChild(imgCapa);
+    divCapaTitulo.appendChild(divText);
+    
+    shelves[1].appendChild(divCapaTitulo);
+  });
+
+
+
+  //terceira coluna (livros recém-publicados)
   const latestBooks = [];
 
   const releaseDates = books.map(book => { //passando por todos os objetos do array de livros /map retorna array
