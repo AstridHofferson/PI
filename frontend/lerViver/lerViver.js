@@ -127,6 +127,25 @@ async function handleShelf() { //função assíncrona não lê a próxima linha 
     divCapaTitulo.appendChild(divText);
     
     shelves[2].appendChild(divCapaTitulo);
+
+
+    //barra de pesquisa
+    const span = document.getElementsByClassName('material-icons');
+
+    span[0].addEventListener('click', () => {
+      var input = document.getElementById('pesquisa').value;
+      
+      for(let i = 0; i < books.length; i++) {
+        var verTit = books[i].title.toLowerCase().indexOf(input.toLowerCase());
+        var verAut = books[i].author.toLowerCase().indexOf(input.toLowerCase());
+        console.log(verAut + ' ' + verTit);
+        if(verTit != -1 || verAut != -1) {
+          window.location.href = `http://127.0.0.1:5501/frontend/pgPesquisa`;
+        }
+      }
+
+    });
+
   });
 }
 
