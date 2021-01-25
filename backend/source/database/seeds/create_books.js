@@ -1,7 +1,7 @@
 module.exports = {
   async seed(knex) {
     await knex('books').insert([
-      { title: 'A Abadia de Northanger', 
+      { title: 'A Abadia de Northanger',
         synopsis: 'Escrito ainda na juventude de Jane Austen e publicado postumamente, em 1818, "A Abadia de Northanger" é, sem dúvida, um dos romances mais elaborados da época – uma comédia satírica que aborda questões humanas de maneira sutil, tendo como pano de fundo a cidade de Bath. O enredo gira em torno de Catherine Morland, que deixa a tranquila e, por vezes, tediosa vida na zona rural da Inglaterra para passar uma temporada na agitada e sofisticada Bath do final do século XVIII. Catherine é uma jovem ingênua, cheia de energia e leitora voraz de romances góticos. O livro faz uma espécie de paródia a esses romances, especialmente os escritos por Ann Radcliffe. Jane Austen faz um eloquente contraste entre realidade e imaginação, entre uma vida pacata e as situações sinistras e excitantes que os personagens de um romance podem viver.',
         publicationDate: 'Dezembro de 1817',
         author: 'Jane Austen',
