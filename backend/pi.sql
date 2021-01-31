@@ -1,7 +1,10 @@
+create database pi;
+use pi;
+
 create table books (
 	id_book int primary key auto_increment,
     title varchar(50) not null not null,
-    publication_date date not null,
+    publication_date varchar(50) not null,
     author varchar(150) not null,
     genres varchar(100) not null,
     nationality varchar(50) not null,
@@ -25,7 +28,7 @@ create table blog_avaliation (
     blog_avaliation_note int not null,
     blog_avaliation_link varchar(150) not null,
     book_id int not null,
-    constraint fk_book foreign key(book_id) references books(id_books)
+    constraint fk_book foreign key(book_id) references books(id_book)
 );
 
 create table rate (
@@ -36,7 +39,7 @@ create table rate (
 	user_id int not null,
     book_id int not null,
     constraint fk_user foreign key(user_id) references users(id_user),
-    constraint fk_book foreign key(book_id) references books(id_book)
+    constraint book_fk_book foreign key(book_id) references books(id_book)
 );
 
 create table covers (
