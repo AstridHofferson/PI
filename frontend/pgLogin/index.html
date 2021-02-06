@@ -11,16 +11,17 @@
     <link rel="icon" type="image/png" sizes="32x32" href="../../images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="../../images/favicon-16x16.png">
     <link rel="manifest" href="../../images/site.webmanifest">
+    <script src="./pgLogin.js" defer></script>
 </head>
 <body>
     <div class="tudo">
         <div class="logo"><a href="http://127.0.0.1:5501/frontend/lerViver/index.html"><img class="logo" src="../../images/Logo.png"></a></div>
         <h2>Entrar</h2>
-        <input type="text" class="email" placeholder="E-mail">
-        <input type="password" class="senha" placeholder="Senha">
+        <input type="text" class="email" id="email" placeholder="E-mail">
+        <input type="password" class="senha" id="senha" placeholder="Senha">
         <div class="buttons">
             <button class="cadastro">Cadastrar</button>
-            <button class="entrar">Entre</button>
+            <button onclick="login()" class="entrar">Entre</button>
         </div>
     </div>
 </body>

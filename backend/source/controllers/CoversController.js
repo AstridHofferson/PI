@@ -1,18 +1,17 @@
-const knex = require('../database/connection');
+const conn = require('../database/connection');
 
 
 module.exports = {
   async index(request, response) {
-    const covers = await knex('covers').select('*');
-  
-    const serializedItems = covers.map(cover => {
-      return {
-        id: cover.id,
-        title: cover.title,
-        image_url: `http://localhost:3333/uploads/${cover.image}`
-      };
-    });
-    
-    return response.json(serializedItems);
+    const connection = await conn;
+    const [covers, fields] = await connection.execute('SELECT * FROM covers');
+
+    if (covers) {
+
+      return response.json( covers );
+
+    } else {
+      return response.status(400).json({ erro: 'Capa não existe' });
+    }
   }
 }

@@ -8,7 +8,6 @@ async function handleShelf() { //função assíncrona não lê a próxima linha 
   const shelves = document.getElementsByClassName('livros');
   
 
-
   //primeira coluna (livros)
   const randomizedBooks = [];
 
@@ -36,7 +35,7 @@ async function handleShelf() { //função assíncrona não lê a próxima linha 
 
     const imgCapa = document.createElement('img');
     imgCapa.setAttribute('class', 'capa');
-    imgCapa.setAttribute('src', cover.image_url);
+    imgCapa.setAttribute('src', 'http://localhost:3333/uploads/'+cover.image);
 
     const divText = document.createElement('div');
     divText.setAttribute('class', 'text');
@@ -50,7 +49,7 @@ async function handleShelf() { //função assíncrona não lê a próxima linha 
 
   
 
-  //terceira coluna (livros recém-publicados)
+  //segunda coluna (para novos leitores)
   let newReadersBooks = [];
   
   for (let i = 0; i < books.length; i++) {
@@ -73,7 +72,7 @@ async function handleShelf() { //função assíncrona não lê a próxima linha 
 
     const imgCapa = document.createElement('img');
     imgCapa.setAttribute('class', 'capa');
-    imgCapa.setAttribute('src', cover.image_url);
+    imgCapa.setAttribute('src', 'http://localhost:3333/uploads/'+cover.image);
 
     const divText = document.createElement('div');
     divText.setAttribute('class', 'text');
@@ -117,7 +116,7 @@ async function handleShelf() { //função assíncrona não lê a próxima linha 
 
     const imgCapa = document.createElement('img');
     imgCapa.setAttribute('class', 'capa');
-    imgCapa.setAttribute('src', cover.image_url);
+    imgCapa.setAttribute('src', 'http://localhost:3333/uploads/'+cover.image);
 
     const divText = document.createElement('div');
     divText.setAttribute('class', 'text');

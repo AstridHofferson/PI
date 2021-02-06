@@ -1,17 +1,18 @@
-const connection = require('../database/connection');
+const conn = require('../database/connection');
 
 module.exports = {
 
     async index(request, response) {
-      const books = await connection('books').select('*');
+      const connection = await conn;
+      const [books, fields] = await connection.execute('SELECT * FROM books');
 
       return response.json(books);
     },
 
     async show(request, response) {
+      const connection = await conn;
       const { bookId } = request.params;
-
-      const book = await connection('books').where('id', bookId).first();
+      const [books, fields] = await connection.execute('SELECT * FROM books WHERE id = ? LIMIT 1',[bookId]);
 
       if (book) {
 

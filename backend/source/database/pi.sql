@@ -83,5 +83,3 @@ VALUES ('A Abadia de Northanger', 'a-abadia-de-northanger.jpg'),
 ('Orgulho e Preconceito', 'orgulho-e-preconceito.jpg'),
 ('Rangers - Ruínas de Gorlan', 'rangers-ruinas-de-gorlan.jpg'),
 ('A Rainha Vermelha', 'rainha-vermelha.jpg');
-
-
