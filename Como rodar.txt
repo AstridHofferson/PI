@@ -1,0 +1,3 @@
+No terminal do vscode:
+    cd backend
+    npm run dev
