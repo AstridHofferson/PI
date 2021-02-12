@@ -13,6 +13,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="../../images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="../../images/favicon-16x16.png">
     <link rel="manifest" href="../../images/site.webmanifest">
+    <script src="./pgPesquisa.js" defer></script>
     <script src="../main.js" defer></script>
 </head>
 
@@ -21,7 +22,7 @@
         <div class="logo"><a href="http://127.0.0.1:5501/frontend/lerViver/index.html"><img class="logo" src="../../images/Logo.png"></a></div>
         <div class="pesquisa">
             <input class="pesquisa" type="text" placeholder="Pesquise por título ou autor" id="pesquisa">
-            <span class="material-icons">
+            <span onclick="searching()" class="material-icons">
                 search
             </span>
         </div>

@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- begin wwww.htmlcommentbox.com -->
+    <!-- <link rel="stylesheet" type="text/css" href="https://www.htmlcommentbox.com/static/skins/bootstrap/twitter-bootstrap.css?v=0" /> -->
+    <!-- end www.htmlcommentbox.com -->
     <link href="../main.css" rel="stylesheet">
     <link href="pgLivro.css" rel="stylesheet">
     <title>Ler é Viver</title>
@@ -14,13 +17,14 @@
     <link rel="icon" type="image/png" sizes="16x16" href="../../images/favicon-16x16.png">
     <link rel="manifest" href="../../images/site.webmanifest">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-    <script src="./pgLivro.js" defer></script>
+    <script id="hcb" src="./pgLivro.js" defer></script>
     <script src="../main.js" defer></script>
 </head>
 
 <body>
     <div class="cabecalho">
-        <div class="logo"><a href="http://127.0.0.1:5501/frontend/lerViver/index.html"><img class="logo" src="../../images/Logo.png"></a></div>
+        <div class="logo"><a href="http://127.0.0.1:5501/frontend/lerViver/index.html"><img class="logo"
+                    src="../../images/Logo.png"></a></div>
         <div class="pesquisa">
             <input class="pesquisa" type="text" placeholder="Pesquise por título ou autor" id="pesquisa">
             <span class="material-icons">
@@ -29,9 +33,9 @@
         </div>
         <div class="perfil">Perfil</div>
     </div>
-    
+
     <div class="tudo">
-        <h2 class="titulo"></h2>
+        <h1 class="titulo"></h1>
         <div class="capaInfo">
             <div class="caEs">
                 <div class="capa">
@@ -62,7 +66,7 @@
                 <p class="informacoes"> </p>
                 <p class="informacoes"> </p>
                 <p class="informacoes"> </p>
-                <p><b>Avaliações de Blogs:</b> 5<img class="star" src="../../images/star.png"> (6 avaliações)</p>
+                <!-- <p><b>Avaliações de Blogs:</b> 5<img class="star" src="../../images/star.png"> (6 avaliações)</p> -->
                 <p><b>Avaliações de Usuários:</b> 0<img class="star" src="../../images/star.png"> (0 avaliações)</p>
             </div>
             <div class="sinopse">
@@ -73,48 +77,31 @@
 
         <div class="avRel">
             <div class="blogs">
-                <h3>Resenhas/Avaliações</h3>
-                <p>
-                    <h2>4</h2><img class="star" src="../../images/star.png">
-                    <a href="https://resenhandosonhos.com/orgulho-e-preconceito-jane-austen/">Resenhando Sonhos</a>
-                </p>
-                <p>
-                    <h2>5</h2><img class="star" src="../../images/star.png">
-                    <a href="https://www.estantediagonal.com.br/2018/06/resenha-orgulho-e-preconceito.html">Estante Diagonal</a>
-                </p>
-                <p>
-                    <h2>5</h2><img class="star" src="../../images/star.png">
-                    <a href="http://www.livrosefuxicos.com/2012/02/resenha-orgulho-e-preconceito-jane.html">Livros e Fuxicos</a>
-                </p>
-                <p>
-                    <h2>5</h2><img class="star" src="../../images/star.png">
-                    <a href="http://resenhandopormarina.com/orgulho-preconceito/">Resenhando - por Marina Mafra</a>
-                </p>
-                <p>
-                    <h2>4</h2><img class="star" src="../../images/star.png">
-                    <a href="http://www.psamoleitura.com/2019/02/resenha-orgulho-e-preconceito.html">PS Amo Leitura</a>
-                </p>
-                <p>
-                    <h2>5</h2><img class="star" src="../../images/star.png">
-                    <a href="https://resenhasalacarte.com.br/resenha/orgulho-e-preconceito-jane-austen/">Resenhas à la Carte</a>
-                </p>
+                <h2>Resenhas/Avaliações</h2>
+                <p class="avaliacao"> </p>
+                <p class="avaliacao"> </p>
+                <p class="avaliacao"> </p>
+                <p class="avaliacao"> </p>
+                <p class="avaliacao"> </p>
             </div>
             <div class="relacionado">
-                <h3>Livro Relacionado</h3>
+                <h2>Livro Relacionado</h2>
                 <img class="capaRel" src="">
             </div>
         </div>
 
         <div class="comentarios">
-            <h3>Comentários</h3>
+            <h2>Comentários</h2>
+            <!-- <div id="HCB_comment_box"><a href="http://www.htmlcommentbox.com">Comment Form</a> is loading comments...
+            </div> -->
             1 comentários
             <div class="comentar">
-                <img class="foto" src="../../images/astrid.jpeg">
+                <!-- <img class="foto" src="../../images/astrid.jpeg"> -->
                 <input class="comentar" type="text" placeholder="Comentar">
             </div>
             <div class="comentario">
                 <div class="usuario">
-                    <img class="fotoComent" src="../../images/soluco.jpeg">
+                    <!-- <img class="fotoComent" src="../../images/soluco.jpeg"> -->
                     <h4>Soluço Haddock</h4>
                 </div>
                 <p>Realmente um livro lindo e maravilhoso</p>
@@ -124,6 +111,16 @@
             </div>
         </div>
     </div>
+
+    <!-- <script type="text/javascript" id="hcb">
+        if (!window.hcb_user) { hcb_user = {}; } (function () {
+            var s = document.createElement("script"), l = hcb_user.PAGE || ("" + window.location).replace(/'/g, "%27"), h = "https://www.htmlcommentbox.com";
+            s.setAttribute("type", "text/javascript");
+            s.setAttribute("src", h + "/jread?page=" + encodeURIComponent(l).replace("+", "%2B") + "&mod=%241%24wq1rdBcg%24tAt5ghvAWepMTgiNmPZsp0" + "&opts=16862&num=10&ts=1613071827524");
+            if (typeof s != "undefined") document.getElementsByTagName("head")[0].appendChild(s);
+        })();
+    </script> -->
+
 </body>
 
 </html>

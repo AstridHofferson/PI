@@ -89,7 +89,7 @@ div.sinopse {
 div.avRel {
     display: flex;
     width: 80vw;
-    min-height: 75vh;
+    min-height: 65vh;
     background: #e6e6e6ff;
     border-radius: 4px;
     margin: 0 0 40px 0;
@@ -101,27 +101,23 @@ div.blogs {
     margin: 15px;
     padding-left: 25px;
     padding-top: 5px;
+    padding-right: 15px;
+    padding-bottom: 10px;
     font-weight: bold;
     border-radius: 4px;
 }
 
 .blogs p {
-    display: block;
-    margin-block-start: -10px;
-    margin-block-end: -10px;
-    margin-inline-start: -10px;
-    margin-inline-end: -10px;
+    margin: 25px 0 0 20px;
 }
 
 a {
     text-decoration: none;
     color: black;
-    width: 10vw;
+    /* width: 10vw; */
     cursor: pointer;
-}
-
-.blogs h3 {
-    text-align: center;
+    font-size: 1.2em;
+    margin-left: 10px;
 }
 
 .blogs a:hover {
@@ -129,16 +125,19 @@ a {
 }
 
 .blogs h2 {
-    width: 1vw;
-    display: inline-block;
-    color: #FC0;
+    text-align: center;
 }
 
-.blogs img.star {
+.blogs b {
+    font-size: 1.5em;
+    color: rgb(236, 189, 0);
+}
+
+/* .blogs img.star {
     width: 1.5vw;
     height: 3vh;
     margin-right: 10px;
-}
+} */
 
 div.relacionado {
     display: flex;
@@ -153,7 +152,7 @@ div.relacionado {
     margin: 15px 15px 15px 0;
 }
 
-img.capaRel {
+/* img.capaRel {
     height: 55vh;
     align-self: center;
     cursor: pointer;
@@ -166,13 +165,13 @@ img.capaRel {
 
 .relacionado h3 {
     margin-bottom: 30px;
-}
+} */
 
 div.comentarios {
     width: 80vw;
     min-height: 50vh;
     background: #e6e6e6ff;
-    padding-left: 20px;
+    padding: 10px 0 0 30px;
     border-radius: 4px;
     margin-bottom: 40px;
 }
@@ -187,11 +186,11 @@ div.comentar {
     align-items: center;
 }
 
-img.foto {
+/* img.foto {
     width: 4.5vw;
     height: 100%;
     border-radius: 4px;
-}
+} */
 
 input.comentar {
     width: 37vw;
@@ -216,7 +215,7 @@ div.comentario {
 }
 
 .comentario p {
-    margin: 10px 10px 0px 10px;
+    margin: 10px;
 }
 
 img.like {

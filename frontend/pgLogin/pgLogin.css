@@ -1,7 +1,17 @@
+div.tudo {
+    height: 80vh;
+    margin-top: 30px;
+}
+
+input {
+    height: 12%;
+}
+
 button.cadastro {
     color: rgb(14, 171, 219);
     background: transparent;
     transition: .2s;
+    margin-right: 15px;
 }
 
 .cadastro:hover {

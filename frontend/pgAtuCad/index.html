@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,14 +12,20 @@
     <link rel="icon" type="image/png" sizes="32x32" href="../../images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="../../images/favicon-16x16.png">
     <link rel="manifest" href="../../images/site.webmanifest">
+    <script src="./pgAtuCad.js" defer></script>
 </head>
+
 <body>
     <div class="tudo">
-        <div class="logo"><a href="http://127.0.0.1:5501/frontend/lerViver/index.html"><img class="logo" src="../../images/Logo.png"></a></div>
+        <div class="logo"><a href="http://127.0.0.1:5501/frontend/lerViver/index.html"><img class="logo"
+                    src="../../images/Logo.png"></a></div>
         <h2>Atualizar Perfil</h2>
-        <input type="text" class="name" placeholder="Nickname">
-        <input type="text" class="email" placeholder="E-mail">
-        <button class="salvar">Salvar</button>
+        <input type="text" class="name" id="name" placeholder="Nickname">
+        <input type="text" class="email" id="email" placeholder="E-mail">
+        <input type="password" class="senha" id="senha" placeholder="Senha">
+        <input type="password" class="senha" id="confSenha" placeholder="Confirmar senha">
+        <button onclick="updateProfile()" class="salvar">Salvar</button>
     </div>
 </body>
+
 </html>

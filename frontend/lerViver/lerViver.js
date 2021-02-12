@@ -1,26 +1,26 @@
 async function handleShelf() { //função assíncrona não lê a próxima linha até a linha atual ter executado
   response = await fetch('http://localhost:3333/books'); //pegando informações da tabela livros
   books = await response.json(); //transformando arquivo json em objeto js
-  
+
   response = await fetch('http://localhost:3333/covers');
   covers = await response.json();
-  
+
   const shelves = document.getElementsByClassName('livros');
-  
+
 
   //primeira coluna (livros)
   const randomizedBooks = [];
 
   for (let i = 0; i < 8; i++) {
     book = books[Math.floor(Math.random() * books.length)]; //(arredonda num pra baixo(cria num aleatorio de 0 a 1))
-    
+
     if (!randomizedBooks.includes(book)) { //testa se não tem o livro no array
       randomizedBooks.push(book); //colocar um livro no array
     } else {
       i--;
     }
   };
-  
+
   randomizedBooks.forEach((book, index) => { //a function vai acontecer para cada livro que tiver no array
 
     const cover = covers.find(cover => cover.id === book.id); //pegar as capas do cover que tenham o mesmo id do livro
@@ -35,7 +35,7 @@ async function handleShelf() { //função assíncrona não lê a próxima linha 
 
     const imgCapa = document.createElement('img');
     imgCapa.setAttribute('class', 'capa');
-    imgCapa.setAttribute('src', 'http://localhost:3333/uploads/'+cover.image);
+    imgCapa.setAttribute('src', 'http://localhost:3333/uploads/' + cover.image);
 
     const divText = document.createElement('div');
     divText.setAttribute('class', 'text');
@@ -43,22 +43,22 @@ async function handleShelf() { //função assíncrona não lê a próxima linha 
 
     divCapaTitulo.appendChild(imgCapa); //colocando imgCapa na div
     divCapaTitulo.appendChild(divText);
-    
+
     shelves[0].appendChild(divCapaTitulo);
   });
 
-  
+
 
   //segunda coluna (para novos leitores)
   let newReadersBooks = [];
-  
+
   for (let i = 0; i < books.length; i++) {
-    if(books[i].readingLevel <= 2) {
+    if (books[i].reading_level <= 2) {
       newReadersBooks.push(books[i]);
     }
   }
 
-  newReadersBooks.forEach((book, index) => { 
+  newReadersBooks.forEach((book, index) => {
 
     const cover = covers.find(cover => cover.id === book.id);
 
@@ -72,7 +72,7 @@ async function handleShelf() { //função assíncrona não lê a próxima linha 
 
     const imgCapa = document.createElement('img');
     imgCapa.setAttribute('class', 'capa');
-    imgCapa.setAttribute('src', 'http://localhost:3333/uploads/'+cover.image);
+    imgCapa.setAttribute('src', 'http://localhost:3333/uploads/' + cover.image);
 
     const divText = document.createElement('div');
     divText.setAttribute('class', 'text');
@@ -80,7 +80,7 @@ async function handleShelf() { //função assíncrona não lê a próxima linha 
 
     divCapaTitulo.appendChild(imgCapa);
     divCapaTitulo.appendChild(divText);
-    
+
     shelves[1].appendChild(divCapaTitulo);
   });
 
@@ -90,8 +90,8 @@ async function handleShelf() { //função assíncrona não lê a próxima linha 
   const latestBooks = [];
 
   const releaseDates = books.map(book => { //passando por todos os objetos do array de livros /map retorna array
-    const releaseDateSize = book.publicationDate.length; //pegando tamanho da string
-    const year = book.publicationDate.slice(releaseDateSize - 4); //selecionando 4 caracteres antes de terminar a string
+    const releaseDateSize = book.publication_date.length; //pegando tamanho da string
+    const year = book.publication_date.slice(releaseDateSize - 4); //selecionando 4 caracteres antes de terminar a string
     return year;
   });
 
@@ -99,10 +99,10 @@ async function handleShelf() { //função assíncrona não lê a próxima linha 
   releaseDates.reverse(); //coloca na ordem de mais novo pra mais velho
 
   for (let i = 0; i < 8; i++) {
-    latestBooks.push(books.find(book => book.publicationDate.includes(releaseDates[i]))); //testa se publicationDate tem o valor de releaseDates[i]
+    latestBooks.push(books.find(book => book.publication_date.includes(releaseDates[i]))); //testa se publication_date tem o valor de releaseDates[i]
   };
 
-  latestBooks.forEach((book, index) => { 
+  latestBooks.forEach((book, index) => {
 
     const cover = covers.find(cover => cover.id === book.id);
 
@@ -116,7 +116,7 @@ async function handleShelf() { //função assíncrona não lê a próxima linha 
 
     const imgCapa = document.createElement('img');
     imgCapa.setAttribute('class', 'capa');
-    imgCapa.setAttribute('src', 'http://localhost:3333/uploads/'+cover.image);
+    imgCapa.setAttribute('src', 'http://localhost:3333/uploads/' + cover.image);
 
     const divText = document.createElement('div');
     divText.setAttribute('class', 'text');
@@ -124,9 +124,11 @@ async function handleShelf() { //função assíncrona não lê a próxima linha 
 
     divCapaTitulo.appendChild(imgCapa);
     divCapaTitulo.appendChild(divText);
-    
+
     shelves[2].appendChild(divCapaTitulo);
   });
+  
 }
+
 
 handleShelf();

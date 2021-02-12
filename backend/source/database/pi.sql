@@ -2,7 +2,7 @@ create database pi;
 use pi;
 
 create table books (
-	id_book int primary key auto_increment,
+	id int primary key auto_increment,
     title varchar(50) not null not null,
     publication_date varchar(50) not null,
     author varchar(150) not null,
@@ -17,43 +17,44 @@ create table books (
 );
 
 create table users (
-	id_user int primary key auto_increment,
+	id int primary key auto_increment,
     email varchar(100) not null,
     password varchar(10) not null,
     name varchar(100) not null
 );
 
 create table blog_avaliation (
-    id_blog_avaliation int primary key auto_increment,
+    id int primary key auto_increment,
     blog_avaliation_note int not null,
     blog_avaliation_link varchar(150) not null,
+    blog_name varchar(45) not null,
     book_id int not null,
-    constraint fk_book foreign key(book_id) references books(id_book)
+    constraint fk_book foreign key(book_id) references books(id)
 );
 
 create table rate (
-	id_rate int primary key auto_increment,
+	id int primary key auto_increment,
 	note int not null,
     avaliation_date date not null,
     comentary text(300) not null,
 	user_id int not null,
     book_id int not null,
-    constraint fk_user foreign key(user_id) references users(id_user),
-    constraint book_fk_book foreign key(book_id) references books(id_book)
+    constraint fk_user foreign key(user_id) references users(id),
+    constraint book_fk_book foreign key(book_id) references books(id)
 );
 
 create table covers (
-	id_cover int primary key auto_increment,
+	id int primary key auto_increment,
     image varchar(100) not null,
     title varchar(50) not null
 );
 
 create table book_cover (
-	id_book_cover int primary key auto_increment,
+	id int primary key auto_increment,
     book_id int not null,
     cover_id int not null,
-    constraint fkBook foreign key(book_id) references books(id_book),
-    constraint fk_cover foreign key(cover_id) references covers(id_cover)
+    constraint fkBook foreign key(book_id) references books(id),
+    constraint fk_cover foreign key(cover_id) references covers(id)
 );
 
 
@@ -71,7 +72,8 @@ VALUES ('A Abadia de Northanger', 'Dezembro de 1817', 'Jane Austen', 'Ficção g
 ('Rangers - Ruínas de Gorlan', '7 abril 2009', 'John Flanagan', 'Literatura fantástica, Ficção de aventura', 'Austrália', 'The Ruins of Gorlan', 'Fundamento', 'R$59,90', 1, 2009, 'Durante a vida inteira, o pequeno e frágil Will sonhou em ser um forte e bravo guerreiro, como o pai, que ele nunca conheceu. Por isso, ficou arrasado quando não conseguiu entrar para a Escola de Guerra.A partir daí, sua vida tomou um rumo inesperado: ele se tornou o aprendiz de Halt, o misterioso arqueiro, que muitos acreditam ter habilidades que só podem ser resultado de alguma feitiçaria.Relutante, Will aprendeu a usar as armas secretas dos arqueiros: o arco, a flecha, uma capa manchada e... um pequeno pônei muito teimoso. Podem não ser a espada e o cavalo que ele desejava, mas foi com eles que Will e Halt partiram em uma perigosa missão: impedir o assassinato do rei.Essa será uma viagem de descobertas e aventuras fantásticas, na qual Will aprenderá que as armas dos arqueiros são muito mais valiosas do que ele imaginava.'),
 ('A Rainha Vermelha', '10 de fevereiro de 2015', 'Victoria Aveyard', 'Ficção juvenil, Literatura fantástica', 'Estados Unidos', 'Red Queen', 'Seguinte', 'R$39,90', 2, 2015, 'O mundo de Mare Barrow é dividido pelo sangue: vermelho ou prateado. Mare e sua família são vermelhos: plebeus, humildes, destinados a servir uma elite prateada cujos poderes sobrenaturais os tornam quase deuses. Mare rouba o que pode para ajudar sua família a sobreviver e não tem esperanças de escapar do vilarejo miserável onde mora. Entretanto, numa reviravolta do destino, ela consegue um emprego no palácio real, onde, em frente ao rei e a toda a nobreza, descobre que tem um poder misterioso… Mas como isso seria possível, se seu sangue é vermelho? Em meio às intrigas dos nobres prateados, as ações da garota vão desencadear uma dança violenta e fatal, que colocará príncipe contra príncipe - e Mare contra seu próprio coração.');
 
-INSERT INTO covers (image, title)
+
+INSERT INTO covers (title, image)
 VALUES ('A Abadia de Northanger', 'a-abadia-de-northanger.jpg'),
 ('As Crônicas de Nárnia', 'as-cronicas-de-narnia.jpg'),
 ('Circo Mecânico Tresaulti', 'circo-mecanico-tresaulti.jpg'),
@@ -83,3 +85,71 @@ VALUES ('A Abadia de Northanger', 'a-abadia-de-northanger.jpg'),
 ('Orgulho e Preconceito', 'orgulho-e-preconceito.jpg'),
 ('Rangers - Ruínas de Gorlan', 'rangers-ruinas-de-gorlan.jpg'),
 ('A Rainha Vermelha', 'rainha-vermelha.jpg');
+
+
+INSERT INTO blog_avaliation (blog_avaliation_note, blog_avaliation_link, blog_name, book_id)
+VALUES (4, 'https://www.minhavidaliteraria.com.br/2012/02/06/resenha-abadia-de-northanger-html/', 'Minha Vida Literária', 1),
+(5, 'https://www.garotasdevorandolivros.com/2018/03/resenha-abadia-de-northanger-jane-austen.html', 'Garotas Devorando Livors', 1),
+(5, 'http://cronicasdeeloise.blogspot.com/2018/12/resenha-abadia-de-northanger.html', 'Crônicas de Eloise', 1),
+(5, 'http://poressaspaginas.com/resenha-a-abadia-de-northanger-jane-austen', 'Por Essas Páginas', 1),
+(4, 'https://aishando.home.blog/2020/06/15/resenha-a-abadia-de-northanger-jane-austen/', 'Aishando Books', 1),
+
+(3, 'https://medium.com/@tocadalebre/resenha-do-livro-as-cr%C3%B4nicas-de-n%C3%A1rnia-1b587cce8be5', 'Toca da Lebre', 2),
+(4, 'http://www.revelandosentimentos.com.br/2018/12/resenha-as-cronicas-de-narnia.html', 'Revelando Sentimentos', 2),
+(5, 'http://interesses-sutis.blogspot.com/2017/06/resenha-as-cronicas-de-narnia.html', 'Interesses Sutis', 2),
+(4, 'https://castelodoimaginario.blogspot.com/2018/09/resenha-as-cronicas-de-narnia-c-s-lewis.html', 'Castelo Imaginário', 2),
+(5, 'https://www.leitoresesuasmanias.com/2018/01/resenha-as-cronicas-de-narnia-volume.html', 'Leitores e Suas Manias', 2),
+
+(3, 'https://www.momentumsaga.com/2016/06/resenha-o-circo-mecanico-tresaulti-de-genevieve-valentine.html', 'Momentum Saga', 3),
+(5, 'http://www.amigadaleitora.com/2016/05/resenha-o-circo-mecanico-tresaulti.html', 'Amiga da Leitora', 3),
+(3, 'https://formigaeletrica.com.br/livros/o-circo-mecanico-tresaulti/', 'Formiga Elétrica', 3),
+(5, 'http://colorindonuvens.com/blog/2016/10/18/resenha-do-livro-circo-mecanico-tresaulti-de-genevieve-valentine/', 'Colorindo Nuvens', 3),
+(5, 'https://www.soodablog.com.br/2016/03/resenha-circo-mecanico-tresaulti.html', 'Sooda Blog', 3),
+
+(5, 'http://www.seguindoocoelhobrancoo.com.br/2018/09/resenha-como-treinar-o-seu-dragao.html', 'Seguindo o Coelho Branco', 4),
+(4, 'https://www.capitulares.com.br/resenha-como-treinar-seu-dragao/', 'Capitulares', 4),
+(5, 'https://olhandoporai.wordpress.com/2014/06/11/resenha-como-treinar-o-seu-dragao-1-como-treinar-o-seu-dragao-cressida-cowell/', 'Olhando Por Aí', 4),
+(3, 'http://www.sohlendo.com.br/2011/11/resenha-como-treinar-o-seu-dragao.html', 'Só Lendo', 4),
+(4, 'https://www.ohmydogestolcombigods.com.br/2013/06/resenha-como-treinar-o-seu-dragao.html', 'Oh My Dog Estol Com Bigods', 4),
+
+(5, 'http://anatomiapop.com/2018/01/28/resenha-3-motivos-para-ler-duna-e-1-para-nao-ler/', 'Anatomia Pop', 5),
+(4, 'https://anatomiadapalavra.com/2020/12/17/livro-duna-resenha/', 'Anatomia da Palavra', 5),
+(5, 'https://blogsemserifa.com/2015/03/23/resenha-duna/', 'Blog Sem Serifa', 5),
+(3, 'https://www.vailendo.com.br/2017/10/27/duna-de-frank-herbert-resenha/', 'Vai Lendo', 5),
+(4, 'https://formigaeletrica.com.br/livros/livro-duna/', 'Formiga Elétrica', 5),
+
+(5, 'https://www.minhavidaliteraria.com.br/2012/07/19/resenha-jane-eyre-html/', 'Minha Vida Literária', 6),
+(4, 'https://www.vailendo.com.br/2020/09/21/jane-eyre-de-charlotte-bronte-resenha/', 'Vai Lendo', 6),
+(5, 'https://resenhandosonhos.com/jane-eyre-charlotte-bronte/', 'Resenahndo Sonhos', 6),
+(3, 'http://www.starbooks.com.br/2019/09/resenha-jane-eyre-charlotte-bronte.html', 'Star Books', 6),
+(5, 'https://www.parforceinsider.com/post/2019/08/20/resenha-jane-eyre-bront%C3%AB-charlotte', 'Parforce Literário', 6),
+
+(4, 'http://poressaspaginas.com/resenha-jogos-vorazes-suzanne-collins', 'Por Essas Páginas', 7),
+(4, 'https://www.minhavidaliteraria.com.br/2011/10/11/resenha-jogos-vorazes-html/', 'Minha Vida Literária', 7),
+(5, 'http://www.livrosefuxicos.com/2012/04/resenha-jogos-vorazes-suzanne-collins.html', 'Livros e Fuxicos', 7),
+(4, 'http://www.engeplus.com.br/noticia/entre-lidas-e-vindas/2016/resenha-jogos-vorazes', 'Engeplus', 7),
+(4, 'https://www.psamoleitura.com/2018/04/resenha-jogos-vorazes.html', 'PS Amo Leitura', 7),
+
+(5, 'https://valeugutenberg.wordpress.com/2017/05/26/resenha-o-hobbit/', 'Valeu Gutenberg', 8),
+(4, 'https://ellendo.com/2020/01/15/resenha-o-hobbit-j-r-r-tolkien/', 'Ellendo', 8),
+(5, 'http://www.clubedofarol.com/2020/10/resenha-o-hobbit.html', 'Clube do Farol', 8),
+(5, 'https://contaseumlivro.blogspot.com/2018/04/resenha-o-hobbit-jrr-tolkien.html', 'Contas e Um Livro', 8),
+(4, 'https://www.garotasdevorandolivros.com/2019/12/resenha-o-hobbit-jrr-tolkien.html', 'Garotas Devorando Livros', 8),
+
+(4, 'https://resenhandosonhos.com/orgulho-e-preconceito-jane-austen/', 'Resenhando Sonhos', 9),
+(5, 'https://www.estantediagonal.com.br/2018/06/resenha-orgulho-e-preconceito.html', 'Estante Diagonal', 9),
+(5, 'http://www.livrosefuxicos.com/2012/02/resenha-orgulho-e-preconceito-jane.html', 'Livros e Fuxicos', 9),
+(5, 'http://resenhandopormarina.com/orgulho-preconceito/', 'Resenahndo Por Marina', 9),
+(4, 'http://www.psamoleitura.com/2019/02/resenha-orgulho-e-preconceito.html', 'PS Amo Leitura', 9),
+
+(5, 'https://www.mundodasresenhas.com.br/resenha-rangers-ordem-dos-arqueiros-livro-1-ruinas-de-gorlam/', 'Mundo das Resenhas', 10),
+(4, 'https://leitorcabuloso.com.br/2015/04/resenha-rangers-ordem-dos-arqueiros-ruinas-de-gorlan-de-john-flanagan/', 'Leitor Cabuloso', 10),
+(4, 'https://resenhandosonhos.com/rangers-1-ruinas-de-gorlan-john-flanagan/', 'Resenhando Sonhos', 10),
+(5, 'https://infinitasvidas.wordpress.com/2014/07/10/resenha-ruinas-de-gorlan-john-flanagan/', 'Infinitas Vidas', 10),
+(4, 'https://saidaminhalente.com/rangers-1-ruinas-de-gorlan/', 'Sai da Minha Lente', 10),
+
+(3, 'https://meowbookblog.com/2018/08/29/resenha-serie-a-rainha-vermelha/', 'Meow Book Blog', 11),
+(3, 'https://www.momentumsaga.com/2018/12/resenha-a-rainha-vermelha-de-victoria-aveyard.html', 'Momentum Saga', 11),
+(5, 'http://www.livrosefuxicos.com/2015/09/resenha-rainha-vermelha-victoria-aveyard.html', 'Livros e Fuxicos', 11),
+(4, 'https://idris.com.br/blog/2018/06/08/resenha-a-rainha-vermelha-quadrilogia-victoria-aveyard/', 'Idris', 11),
+(5, 'https://livrosmaisvendidos.net/a-rainha-vermelha-victoria-aveyard-resenha/', 'Livros Mais Vendidos', 11);
