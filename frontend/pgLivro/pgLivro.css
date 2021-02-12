@@ -176,7 +176,7 @@ div.comentarios {
     margin-bottom: 40px;
 }
 
-div.comentar {
+/* div.comentar {
     width: 43vw;
     height: 9vh;
     margin-top: 25px;
@@ -184,7 +184,7 @@ div.comentar {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-}
+} */
 
 /* img.foto {
     width: 4.5vw;
@@ -192,7 +192,7 @@ div.comentar {
     border-radius: 4px;
 } */
 
-input.comentar {
+/* input.comentar {
     width: 37vw;
     border-radius: 4px;
     height: 80%;
@@ -216,9 +216,9 @@ div.comentario {
 
 .comentario p {
     margin: 10px;
-}
+} */
 
-img.like {
+/* img.like {
     background-image: url(../../images/like.png);
     margin-left: 2px;
     margin-top: 10px;
@@ -268,7 +268,7 @@ img.fotoComent {
     height: 100%;
     border-radius: 4px;
     margin-right: 10px;
-}
+} */
 
 div.estrelas {
     cursor: pointer;

@@ -59,13 +59,13 @@ async function handleBook() {
   avaliacao[4].innerHTML = `<b>${blog_avaliation[4].blog_avaliation_note}</b><img height="18vh" width="18vw" src="../../images/star.png"> <a href="${blog_avaliation[4].blog_avaliation_link}"> ${blog_name[4].blog_name}</a>`;
 
 
-  // if (!window.hcb_user) { hcb_user = {}; }
-  // (function () {
-  //   var s = document.createElement("script"), l = hcb_user.PAGE || ("" + window.location).replace(/'/g, "%27"), h = "https://www.htmlcommentbox.com";
-  //   s.setAttribute("type", "text/javascript");
-  //   s.setAttribute("src", h + "/jread?page=" + encodeURIComponent(l).replace("+", "%2B") + "&mod=%241%24wq1rdBcg%24tAt5ghvAWepMTgiNmPZsp0" + "&opts=16862&num=10&ts=1613071827524");
-  //   if (typeof s != "undefined") document.getElementsByTagName("head")[0].appendChild(s);
-  // })();
+  if (!window.hcb_user) { hcb_user = {}; }
+  (function () {
+    var s = document.createElement("script"), l = hcb_user.PAGE || ("" + window.location).replace(/'/g, "%27"), h = "https://www.htmlcommentbox.com";
+    s.setAttribute("type", "text/javascript");
+    s.setAttribute("src", h + "/jread?page=" + encodeURIComponent(l).replace("+", "%2B") + "&mod=%241%24wq1rdBcg%24tAt5ghvAWepMTgiNmPZsp0" + "&opts=16862&num=10&ts=1613071827524");
+    if (typeof s != "undefined") document.getElementsByTagName("head")[0].appendChild(s);
+  })();
 
 
   //livro relacionado
